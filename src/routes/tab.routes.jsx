@@ -27,12 +27,12 @@ const TabRoutes = () => {
             <Feather
               name="home"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
           tabBarLabel: "Inicial",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
+          tabBarActiveTintColor: "#0021AD",
+          tabBarInactiveTintColor: "#528DFF",
         }}
       />
 
@@ -45,12 +45,12 @@ const TabRoutes = () => {
             <Feather
               name="users"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
-          tabBarLabel: "Usuários",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
+          tabBarLabel: "Filiais",
+          tabBarActiveTintColor: "#0021AD",
+          tabBarInactiveTintColor: "#528DFF",
         }}
       />
 
@@ -66,12 +66,12 @@ const TabRoutes = () => {
             <Feather
               name="user"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
           tabBarLabel: "Perfil",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
+          tabBarActiveTintColor: "#0021AD",
+          tabBarInactiveTintColor: "#528DFF",
         }}
       />
 
@@ -84,12 +84,12 @@ const TabRoutes = () => {
             <Feather
               name="list"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
           tabBarLabel: "Cadastro",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
+          tabBarActiveTintColor: "#0021AD",
+          tabBarInactiveTintColor: "#528DFF",
         }}
       />
     </Tab.Navigator>

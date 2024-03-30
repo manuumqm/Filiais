@@ -24,7 +24,7 @@ export default function Profile({ route }) {
       <Title title="Profile" />
 
       {data ? (
-        <Text>Detalhes do usuário</Text>
+        <Text style={styles.titulo}>Detalhes da filial</Text>
       ) : (
         <Text>Selecione uma filial para exibir seus detalhes</Text>
       )}

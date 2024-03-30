@@ -7,6 +7,7 @@ import Title from "../../components/Title";
 
 import usersRepository from "../../models/user/UserRepository";
 import User from "../../models/user/User";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Form({ route }) {
   let { user, edit } = route.params;
@@ -63,8 +64,9 @@ export default function Form({ route }) {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
-      <Title title={isUpdate ? "Editar Filial" : "Novo Filial"} />
+      <Title style={styles.titulo} title={isUpdate ? "Editar Filial" : "Nova Filial"} />
       <TextInput
         placeholder="Digite o nome da filial"
         style={styles.userInput}
@@ -121,5 +123,6 @@ export default function Form({ route }) {
         </TouchableOpacity>
       )}
     </View>
+    </ScrollView>
   );
 }

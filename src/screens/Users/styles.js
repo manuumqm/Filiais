@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   editButton: {
     padding: 5,
     borderRadius: 5,
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#528DFF",
     marginRight: 5,
     minWidth: 70,
     alignItems: "center",
@@ -41,10 +41,22 @@ const styles = StyleSheet.create({
   detailsButton: {
     padding: 5,
     borderRadius: 5,
-    backgroundColor: "#ADD8E6",
+    backgroundColor: "#528DFF",
     minWidth: 70,
     alignItems: "center",
   },
+  txt: {
+    fontSize: 20,
+    color: "#0021AD",
+    marginTop: 70,
+  },
+  box: {
+    marginTop: 50,
+    marginBottom: 50,
+    backgroundColor: "#006DFF",
+    borderRadius: 10,
+
+  }
 });
 
 export default styles;

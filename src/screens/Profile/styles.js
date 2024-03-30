@@ -9,13 +9,13 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 20,
     padding: 10,
-    backgroundColor: "#C9D4FF",
+    backgroundColor: "#528DFF",
     borderRadius: 5,
   },
   user: {
-    marginTop: 20,
+    marginTop: 50,
     padding: 10,
-    backgroundColor: "#C9D4FF",
+    backgroundColor: "#82ACFF",
     borderRadius: 5,
   },
   userDetail: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   editButton: {
     padding: 5,
     borderRadius: 5,
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#006DFF",
     marginRight: 5,
     minWidth: 70,
     alignItems: "center",
@@ -37,13 +37,18 @@ const styles = StyleSheet.create({
   deleteButton: {
     padding: 5,
     borderRadius: 5,
-    backgroundColor: "#FF6347",
+    backgroundColor: "#1D40D4",
     minWidth: 70,
     alignItems: "center",
   },
   text: {
     fontSize: 16,
   },
+  titulo: {
+    fontSize: 15,
+    color: "#0021AD",
+    marginTop: 10,
+  }
 });
 
 export default styles;

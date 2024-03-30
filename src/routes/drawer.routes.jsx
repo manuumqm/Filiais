@@ -20,12 +20,12 @@ const DrawerRoutes = () => {
             <Feather
               name="home"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "##0021AD" : "#528DFF"}
             />
           ),
           drawerLabel: "Inicial",
-          drawerActiveTintColor: "#131313",
-          drawerInactiveTintColor: "#D6D6D6",
+          drawerActiveTintColor: "#0021AD",
+          drawerInactiveTintColor: "#528DFF",
         }}
       />
       <Drawer.Screen
@@ -38,12 +38,12 @@ const DrawerRoutes = () => {
             <Feather
               name="user"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
           drawerLabel: "Perfil",
-          drawerActiveTintColor: "#131313",
-          drawerInactiveTintColor: "#D6D6D6",
+          drawerActiveTintColor: "#0021AD",
+          drawerInactiveTintColor: "#528DFF",
         }}
       />
       <Drawer.Screen
@@ -55,12 +55,12 @@ const DrawerRoutes = () => {
             <Feather
               name="list"
               size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
+              color={focused ? "#0021AD" : "#528DFF"}
             />
           ),
           drawerLabel: "Categorias",
-          drawerActiveTintColor: "#131313",
-          drawerInactiveTintColor: "#D6D6D6",
+          drawerActiveTintColor: "#0021AD",
+          drawerInactiveTintColor: "#528DFF",
         }}
       />
     </Drawer.Navigator>

@@ -5,6 +5,7 @@ import { useNavigation, useIsFocused } from "@react-navigation/native";
 import styles from "./styles";
 import Title from "../../components/Title";
 import usersRepository from "../../models/user/UserRepository";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Users() {
   const navigation = useNavigation();
@@ -20,28 +21,32 @@ export default function Users() {
 
   return (
     <View style={styles.container}>
-      <Title title="Users" />
-      <Text>Tela de listagem de todos os usuários</Text>
+      <Title title="Filiais" />
+      <Text style={styles.txt}>Tela de listagem de todas as filiais</Text>
 
       {allUsers.length > 0 ? (
-        <View style={styles.userList}>
-          {allUsers.map((user) => (
-            <View key={user.id} style={styles.userItem}>
-              <View>
-                <Text style={styles.userName}>{user.name}</Text>
-              </View>
+        <ScrollView>
+          <View style={styles.userList}>
+            {allUsers.map((user) => (
+              <View style={styles.box}>
+                <View key={user.id} style={styles.userItem}>
+                  <View>
+                    <Text style={styles.userName}>{user.name}</Text>
+                  </View>
 
-              <View style={styles.userActions}>
-                <TouchableOpacity
-                  style={styles.detailsButton}
-                  onPress={() => navigation.navigate("Profile", { data: user })}
-                >
-                  <Text>Detalhes</Text>
-                </TouchableOpacity>
+                  <View style={styles.userActions}>
+                    <TouchableOpacity
+                      style={styles.detailsButton}
+                      onPress={() => navigation.navigate("Profile", { data: user })}
+                    >
+                      <Text>Detalhes</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
               </View>
-            </View>
-          ))}
-        </View>
+            ))}
+          </View>
+        </ScrollView>
       ) : (
         <Text>Não há filiais cadastrados</Text>
       )}
