@@ -26,14 +26,19 @@ export default function Profile({ route }) {
       {data ? (
         <Text>Detalhes do usuário</Text>
       ) : (
-        <Text>Selecione um usuário para exibir seus detalhes</Text>
+        <Text>Selecione uma filial para exibir seus detalhes</Text>
       )}
 
       <View style={styles.user}>
         <View style={styles.userDetail}>
           <Text style={styles.text}>{data.name}</Text>
           <Text style={styles.text}>{data.email}</Text>
-          <Text style={styles.text}>{data.age}</Text>
+          <Text style={styles.text}>{data.fundacao}</Text>
+          <Text style={styles.text}>{data.funcionarios}</Text>
+          <Text style={styles.text}>{data.telefone}</Text>
+          <Text style={styles.text}>{data.endereco}</Text>
+          <Text style={styles.text}>{data.responsavel}</Text>
+
         </View>
 
         <View style={styles.userActions}>

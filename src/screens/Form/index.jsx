@@ -13,7 +13,12 @@ export default function Form({ route }) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [age, setAge] = useState("");
+  const [fundacao, setFundacao] = useState("");
+  const [funcionarios, setFuncionarios] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [responsavel, setResponsavel] = useState("");
+
   const [isUpdate, setIsUpdate] = useState(edit);
 
   const navigation = useNavigation();
@@ -22,7 +27,11 @@ export default function Form({ route }) {
     if (edit) {
       setName(user.name);
       setEmail(user.email);
-      setAge(String(user.age));
+      setFundacao(user.fundacao);
+      setFuncionarios(user.funcionarios);
+      setTelefone(user.telefone);
+      setEndereco(user.endereco);
+      setResponsavel(user.responsavel);
       setIsUpdate(true);
     } else {
       clearInputs();
@@ -31,10 +40,10 @@ export default function Form({ route }) {
 
   const handleUserAction = () => {
     if (isUpdate) {
-      usersRepository.update(user.id, name, email, parseInt(age) || 0);
+      usersRepository.update(user.id, name, email, fundacao, funcionarios, telefone, endereco, responsavel);
       clearInputs();
     } else {
-      const newUser = new User(name, email, parseInt(age) || 0);
+      const newUser = new User(name, email, fundacao, funcionarios, telefone, endereco, responsavel);
       usersRepository.add(newUser);
       clearInputs();
     }
@@ -46,34 +55,64 @@ export default function Form({ route }) {
     edit = false;
     setName("");
     setEmail("");
-    setAge("");
+    setFundacao("");
+    setFuncionarios("");
+    setTelefone("");
+    setEndereco("");
+    setResponsavel("");
   };
 
   return (
     <View style={styles.container}>
-      <Title title={isUpdate ? "Editar Usuário" : "Novo Usuário"} />
+      <Title title={isUpdate ? "Editar Filial" : "Novo Filial"} />
       <TextInput
-        placeholder="Digite o nome do usuário"
+        placeholder="Digite o nome da filial"
         style={styles.userInput}
         onChangeText={setName}
         value={name}
       />
       <TextInput
-        placeholder="Digite o email do usuário"
+        placeholder="Digite o email da filial"
         style={styles.userInput}
         onChangeText={setEmail}
         value={email}
       />
       <TextInput
-        placeholder="Digite a idade do usuário"
+        placeholder="Digite o ano de fundação da filial"
         style={styles.userInput}
-        onChangeText={setAge}
-        value={age}
+        onChangeText={setFundacao}
+        value={fundacao}
         keyboardType="numeric"
+      />
+       <TextInput
+        placeholder="Digite a quantidade de funcionários da filial"
+        style={styles.userInput}
+        onChangeText={setFuncionarios}
+        value={funcionarios}
+        keyboardType="numeric"
+      />
+       <TextInput
+        placeholder="Digite o telefone da filial"
+        style={styles.userInput}
+        onChangeText={setTelefone}
+        value={telefone}
+        keyboardType="numeric"
+      />
+       <TextInput
+        placeholder="Digite o endereço da filial"
+        style={styles.userInput}
+        onChangeText={setEndereco}
+        value={endereco}
+      />
+       <TextInput
+        placeholder="Digite o nome do responsável pela filial"
+        style={styles.userInput}
+        onChangeText={setResponsavel}
+        value={responsavel}
       />
 
       <TouchableOpacity style={styles.button} onPress={handleUserAction}>
-        <Text>{isUpdate ? "Salvar Alterações" : "Criar Usuário"}</Text>
+        <Text>{isUpdate ? "Salvar Alterações" : "Criar Filial"}</Text>
       </TouchableOpacity>
 
       {isUpdate && (

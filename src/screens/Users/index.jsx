@@ -43,7 +43,7 @@ export default function Users() {
           ))}
         </View>
       ) : (
-        <Text>Não há usuários cadastrados</Text>
+        <Text>Não há filiais cadastrados</Text>
       )}
     </View>
   );
